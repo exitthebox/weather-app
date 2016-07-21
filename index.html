@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="CastApp">
+
+<head>
+    <title>weather-app</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<header class="headerLogo">
+  <div>
+      <img src="images/logo.png" alt="</> codespeak" height="35" width="109">
+  </div>
+</header>
+
+<body>
+
+        <div ng-controller="CastCtrl as cCtrl">
+
+
+    <!-- ========================search bar======================== -->
+<div class="pageCenter">
+    <div class="middleOut">
+        <input ng-model="cCtrl.search" class="form-control" type="text">
+        <button ng-click="cCtrl.submit()">Search</button>
+        <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Search</a></p> -->
+        <p class="fontStyle"> {{ cCtrl.fLow }} {{cCtrl.fUnit}}  </p>
+        <p class="fontStyle"> {{ cCtrl.fHigh }} {{cCtrl.fUnit}} </p>
+    </div>
+  </div>
+    </div>
+
+</body>
+
+<footer>
+</footer>
+
+</html>
